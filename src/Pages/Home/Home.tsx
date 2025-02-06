@@ -21,23 +21,24 @@ export default function Home() {
         }}
       >
         <div style={{ textAlign: "center", width: "65%" }}>
-          <Typography variant={"h1"}>{"Edward Lee"}</Typography>
-          <Typography variant={"h3"} style={{ marginTop: "4px" }}>
+          <Typography variant={"h1"} style={{ zIndex: 1 }}>
+            {"Edward Lee"}
+          </Typography>
+          <Typography variant={"h3"} style={{ marginTop: "4px", zIndex: 1 }}>
             {"Tech Lead"}
           </Typography>
-          <Typography variant={"h3"} style={{ marginTop: "4px" }}>
-            {"Software Engineer"}
+          <Typography variant={"h3"} style={{ marginTop: "4px", zIndex: 1 }}>
+            {"<>Software Engineer</>"}
           </Typography>
-          <Typography variant={"h3"} style={{ marginTop: "4px" }}>
+          <Typography variant={"h3"} style={{ marginTop: "4px", zIndex: 1 }}>
             {"Designer"}
           </Typography>
-          <Typography variant={"h5"} style={{ marginTop: "16px" }}>
+          <Typography variant={"h5"} style={{ marginTop: "16px", zIndex: 1 }}>
             {
               '"And whatever you do, in word or deed, do everything in the name of the Lord Jesus, giving thanks to God the Father through him." - Colossians 3:17'
             }
           </Typography>
         </div>
-        {/* <div style={{mar}}/> */}
         <div style={{ width: "30%" }}>
           <img
             src={ProfilePicture}

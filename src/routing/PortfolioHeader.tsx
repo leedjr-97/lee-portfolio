@@ -4,7 +4,7 @@ import { PortfolioRouting } from "./RouteInfo";
 
 export default function PortfolioHeader() {
   const theme = useTheme();
-  const { navigateToRoute } = usePortfolioRouting();
+  const { navigateToRoute, pathname } = usePortfolioRouting();
 
   const handleNavigate = (route: PortfolioRouting) => {
     navigateToRoute(route);
@@ -26,12 +26,20 @@ export default function PortfolioHeader() {
           onClick={() => {
             handleNavigate(PortfolioRouting.Home);
           }}
+          style={{
+            textDecoration:
+              pathname === PortfolioRouting.Home ? "underline" : undefined,
+          }}
         >
           {"Home"}
         </ListItemButton>
         <ListItemButton
           onClick={() => {
             handleNavigate(PortfolioRouting.About);
+          }}
+          style={{
+            textDecoration:
+              pathname === PortfolioRouting.About ? "underline" : undefined,
           }}
         >
           {"About"}
@@ -40,12 +48,20 @@ export default function PortfolioHeader() {
           onClick={() => {
             handleNavigate(PortfolioRouting.Projects);
           }}
+          style={{
+            textDecoration:
+              pathname === PortfolioRouting.Projects ? "underline" : undefined,
+          }}
         >
           {"Projects"}
         </ListItemButton>
         <ListItemButton
           onClick={() => {
             handleNavigate(PortfolioRouting.Contact);
+          }}
+          style={{
+            textDecoration:
+              pathname === PortfolioRouting.Contact ? "underline" : undefined,
           }}
         >
           {"Contact"}

@@ -46,7 +46,7 @@ type Props = {
   children?: React.ReactNode;
 };
 
-export const PRIMARY = "#006FEE";
+export const PRIMARY = "#1471db";
 export const SECONDARY = "#663399";
 
 const defaultBackgroundColor = {
