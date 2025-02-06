@@ -1,4 +1,10 @@
 import React from "react";
+import ChakraPetch from "../assets/fonts/Chakra_Petch/ChakraPetch-Regular.ttf";
+import ChakraPetchItalic from "../assets/fonts/Chakra_Petch/ChakraPetch-Italic.ttf";
+import ChakraPetchBold from "../assets/fonts/Chakra_Petch/ChakraPetch-Bold.ttf";
+import ChakraPetchLight from "../assets/fonts/Chakra_Petch/ChakraPetch-Light.ttf";
+import ChakraPetchMedium from "../assets/fonts/Chakra_Petch/ChakraPetch-Medium.ttf";
+// import ChakraPetch from '../assets/fonts/Chakra_Petch/ChakraPetch-Regular.ttf'
 import {
   PaletteMode,
   alpha,
@@ -192,89 +198,89 @@ export const AppThemeProvider: React.FC<Props> = ({ children }) => {
       },
 
       typography: {
-        fontFamily: ["Manrope", "Inter"].join(","),
+        fontFamily: ["Chakra Petch", "Manrope", "Inter"].join(","),
 
         h1: {
-          fontFamily: "Manrope",
+          fontFamily: "Chakra Petch",
           fontWeight: "600",
           fontSize: "72px",
           lineHeight: 1.2,
         },
         h2: {
-          fontFamily: "Manrope",
+          fontFamily: "Chakra Petch",
           fontWeight: "600",
           fontSize: "62px",
           lineHeight: 1.2,
         },
         h3: {
-          fontFamily: "Manrope",
+          fontFamily: "Chakra Petch",
           fontWeight: "600",
           fontSize: "50px",
           lineHeight: 1.2,
         },
         h4: {
-          fontFamily: "Manrope",
+          fontFamily: "Chakra Petch",
           fontWeight: "700",
           fontSize: "32px",
           lineHeight: 1.2,
         },
         h5: {
-          fontFamily: "Manrope",
+          fontFamily: "Chakra Petch",
           fontWeight: "700",
           fontSize: "24px",
           lineHeight: 1.2,
         },
         h6: {
-          fontFamily: "Manrope",
+          fontFamily: "Chakra Petch",
           fontWeight: "700",
           fontSize: "20px",
           lineHeight: 1.2,
         },
 
         body1: {
-          fontFamily: "Inter",
+          fontFamily: "Chakra Petch",
           fontSize: "14px",
           fontWeight: "400",
         },
         body2: {
-          fontFamily: "Inter",
+          fontFamily: "Chakra Petch",
           fontSize: "13px",
           fontWeight: "400",
         },
       },
       components: {
-        //   MuiCssBaseline: {
-        //     styleOverrides: `
-        //       @font-face {
-        //           font-family: 'Lexend';
-        //           src: local('Lexend'), local('Lexend-Light'), url(${LexendLight}) format('truetype');
-        //           font-weight: 300;
-        //           font-style: normal;
-        //           font-display: swap;
-        //         }
-        //       @font-face {
-        //           font-family: 'Lexend';
-        //           src: local('Lexend'), local('Lexend-Regular'), url(${Lexend}) format('truetype');
-        //           font-weight: 400;
-        //           font-style: normal;
-        //           font-display: swap;
-        //         }
-        //       @font-face {
-        //           font-family: 'Lexend';
-        //           src: local('Lexend'), local('Lexend-Bold'), url(${LexendBold}) format('truetype');
-        //           font-weight: 600;
-        //           font-style: normal;
-        //           font-display: swap;
-        //         }
-        //       @font-face {
-        //           font-family: 'Lexend';
-        //           src: local('Lexend'), local('Lexend-Medium'), url(${LexendMedium}) format('truetype');
-        //           font-weight: 500;
-        //           font-style: normal;
-        //           font-display: swap;
-        //         }
-        //       `,
-        //   },
+        MuiCssBaseline: {
+          styleOverrides: `
+              @font-face {
+                  font-family: 'ChakraPetch';
+                  src: local('ChakraPetch'), local('ChakraPetch-Light'), url(${ChakraPetchLight}) format('truetype');
+                  font-weight: 300;
+                  font-style: normal;
+                  font-display: swap;
+                }
+              @font-face {
+                  font-family: 'ChakraPetch';
+                  src: local('ChakraPetch'), local('ChakraPetch-Regular'), url(${ChakraPetch}) format('truetype');
+                  font-weight: 400;
+                  font-style: normal;
+                  font-display: swap;
+                }
+              @font-face {
+                  font-family: 'ChakraPetch';
+                  src: local('ChakraPetch'), local('ChakraPetch-Bold'), url(${ChakraPetchBold}) format('truetype');
+                  font-weight: 600;
+                  font-style: normal;
+                  font-display: swap;
+                }
+              @font-face {
+                  font-family: 'ChakraPetch';
+                  src: local('ChakraPetch'), local('ChakraPetch-Medium'), url(${ChakraPetchMedium}) format('truetype');
+                  font-weight: 500;
+                  font-style: normal;
+                  font-display: swap;
+                }
+              `,
+        },
         MuiLink: {
           styleOverrides: {
             root: {
