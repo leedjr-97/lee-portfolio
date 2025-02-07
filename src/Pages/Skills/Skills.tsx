@@ -1,6 +1,4 @@
 import { Typography, useTheme } from "@mui/material";
-// import ReactSvg from "../../assets/react.svg";
-import JavascriptPNG from "../../assets/javascript.png";
 import Tools from "./Tools";
 import Frontend from "./Frontend";
 import Backend from "./Backend";
@@ -8,9 +6,6 @@ import Backend from "./Backend";
 export default function Skills() {
   const theme = useTheme();
   // Geospatial
-  // Front end
-  // Back end
-  // Tooling
 
   return (
     <div
