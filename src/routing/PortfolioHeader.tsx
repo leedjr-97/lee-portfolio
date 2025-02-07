@@ -46,6 +46,17 @@ export default function PortfolioHeader() {
         </ListItemButton>
         <ListItemButton
           onClick={() => {
+            handleNavigate(PortfolioRouting.Skills);
+          }}
+          style={{
+            textDecoration:
+              pathname === PortfolioRouting.Skills ? "underline" : undefined,
+          }}
+        >
+          {"Skills"}
+        </ListItemButton>
+        <ListItemButton
+          onClick={() => {
             handleNavigate(PortfolioRouting.Projects);
           }}
           style={{
@@ -55,7 +66,7 @@ export default function PortfolioHeader() {
         >
           {"Projects"}
         </ListItemButton>
-        <ListItemButton
+        {/* <ListItemButton
           onClick={() => {
             handleNavigate(PortfolioRouting.Contact);
           }}
@@ -65,7 +76,7 @@ export default function PortfolioHeader() {
           }}
         >
           {"Contact"}
-        </ListItemButton>
+        </ListItemButton> */}
       </List>
     </div>
   );

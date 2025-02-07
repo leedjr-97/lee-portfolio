@@ -25,13 +25,13 @@ export default function Home() {
             {"Edward Lee"}
           </Typography>
           <Typography variant={"h3"} style={{ marginTop: "4px", zIndex: 1 }}>
-            {"Tech Lead"}
+            {"<Tech Lead />"}
           </Typography>
           <Typography variant={"h3"} style={{ marginTop: "4px", zIndex: 1 }}>
-            {"<>Software Engineer</>"}
+            {"<Software Engineer />"}
           </Typography>
           <Typography variant={"h3"} style={{ marginTop: "4px", zIndex: 1 }}>
-            {"Designer"}
+            {"<Designer />"}
           </Typography>
           <Typography variant={"h5"} style={{ marginTop: "16px", zIndex: 1 }}>
             {
