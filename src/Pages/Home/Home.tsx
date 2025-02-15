@@ -16,7 +16,7 @@ export default function Home() {
           display: "flex",
           flexDirection: "row",
           width: "100%",
-          paddingTop: "64px",
+          paddingTop: "100px",
           justifyContent: "space-between",
         }}
       >
