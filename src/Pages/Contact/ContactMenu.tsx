@@ -1,18 +1,10 @@
-import {
-  List,
-  ListItemButton,
-  ListItemIcon,
-  Tooltip,
-  useTheme,
-} from "@mui/material";
+import { List, ListItemButton, ListItemIcon, Tooltip } from "@mui/material";
 import LinkedInLogo from "../../assets/LinkedIn-Logos/LI-In-Bug.png";
 import GithubLogo from "../../assets/github-mark/github-mark-white.svg";
 import EmailRoundedIcon from "@mui/icons-material/EmailRounded";
 import FileOpenIcon from "@mui/icons-material/FileOpen";
 import ResumePDF from "../../assets/EdwardLeeFrontEndEngineer.pdf";
 export default function ContactMenu() {
-  const theme = useTheme();
-
   return (
     <div
       style={{
@@ -21,7 +13,7 @@ export default function ContactMenu() {
         borderTopRightRadius: "10px",
         position: "absolute",
         left: 0,
-        top: "40%",
+        top: "10%",
         padding: "16px 0 16px 0",
       }}
     >

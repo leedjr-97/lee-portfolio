@@ -16,13 +16,22 @@ function App() {
       }}
     >
       <PortfolioHeader />
-      <div style={{ overflow: "hidden", flex: 1, marginLeft: "32px" }}>
-        <Routing />
-        <Circles />
-        <ContactMenu />
+      <div
+        style={{
+          display: "flex",
+          flex: 1,
+          overflowY: "scroll",
+          marginLeft: "64px",
+        }}
+      >
+        <div style={{ overflowX: "hidden" }}>
+          <Routing />
+        </div>
       </div>
+      <Circles />
+      <ContactMenu />
     </div>
   );
 }
-
+// info icon about rebecca purple
 export default App;

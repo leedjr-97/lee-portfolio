@@ -1038,7 +1038,7 @@
     "@babel/types" "^7.4.4"
     esutils "^2.0.2"
 
-"@babel/preset-react@^7.12.5", "@babel/preset-react@^7.16.0":
+"@babel/preset-react@^7.12.5", "@babel/preset-react@^7.16.0", "@babel/preset-react@^7.26.3":
   version "7.26.3"
   resolved "https://registry.yarnpkg.com/@babel/preset-react/-/preset-react-7.26.3.tgz#7c5e028d623b4683c1f83a0bd4713b9100560caa"
   integrity sha512-Nl03d6T9ky516DGK2YMxrTqvnpUW63TnJMOMonj+Zae0JiPC5BC9xPMSL6L8fiSpA5vP88qfygavVQvnLp+6Cw==
@@ -1050,7 +1050,7 @@
     "@babel/plugin-transform-react-jsx-development" "^7.25.9"
     "@babel/plugin-transform-react-pure-annotations" "^7.25.9"
 
-"@babel/preset-typescript@^7.16.0":
+"@babel/preset-typescript@^7.16.0", "@babel/preset-typescript@^7.26.0":
   version "7.26.0"
   resolved "https://registry.yarnpkg.com/@babel/preset-typescript/-/preset-typescript-7.26.0.tgz#4a570f1b8d104a242d923957ffa1eaff142a106d"
   integrity sha512-NMk1IGZ5I/oHhoXEElcm+xUnL/szL6xflkFZmoEU9xj1qSJXpiS7rsspYo92B4DRCDvZn2erT5LdsCeXAKNCkg==
@@ -7625,9 +7625,11 @@ launch-editor@^2.6.0:
 
 "lee-storybook@git+ssh://git@github.com:leedjr-97/lee-storybook.git":
   version "0.0.1"
-  resolved "git+ssh://git@github.com:leedjr-97/lee-storybook.git#2c5bc387d5494c1fe9ce7943da2d7dc75c570497"
+  resolved "git+ssh://git@github.com:leedjr-97/lee-storybook.git#d0c38f7bd586a586c081ad2192e9b17083ebad13"
   dependencies:
     "@babel/polyfill" "^7.12.1"
+    "@babel/preset-react" "^7.26.3"
+    "@babel/preset-typescript" "^7.26.0"
     "@emotion/react" "^11.14.0"
     "@emotion/styled" "^11.14.0"
     "@mui/icons-material" "^6.4.3"

@@ -1,6 +1,7 @@
 import { List, ListItemButton, useTheme } from "@mui/material";
 import usePortfolioRouting from "./usePortfolioRouting";
 import { PortfolioRouting } from "./RouteInfo";
+import { InfoTooltip } from "lee-storybook";
 
 export default function PortfolioHeader() {
   const theme = useTheme();
@@ -15,7 +16,7 @@ export default function PortfolioHeader() {
       style={{
         display: "flex",
         flexDirection: "row",
-        justifyContent: "left",
+        justifyContent: "space-between",
         backgroundColor: theme.palette.secondary.main,
       }}
     >
@@ -78,6 +79,22 @@ export default function PortfolioHeader() {
           {"Contact"}
         </ListItemButton> */}
       </List>
+
+      <div
+        style={{ margin: "auto 0 auto 0" }}
+        onClick={() => {
+          window.open(
+            "https://medium.com/@valgaze/the-hidden-purple-memorial-in-your-web-browser-7d84813bb416",
+            "_blank"
+          );
+        }}
+      >
+        <InfoTooltip
+          tooltipTitle={"Learn the story behind this color"}
+          tooltipStyles={{ margin: "auto" }}
+          iconColor={"gray"}
+        />
+      </div>
     </div>
   );
 }
