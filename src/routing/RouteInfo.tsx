@@ -1,7 +1,7 @@
+export const baseRoute = "/lee-portfolio";
 export enum PortfolioRouting {
-  Home = "/",
-  About = "/about",
-  Skills = "/skills",
-  Projects = "/projects",
-  Contact = "/contact",
+  Home = `${baseRoute}/`,
+  About = `${baseRoute}/about`,
+  Skills = `${baseRoute}/skills`,
+  Projects = `${baseRoute}/projects`,
 }

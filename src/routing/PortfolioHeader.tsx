@@ -1,7 +1,8 @@
-import { List, ListItemButton, useTheme } from "@mui/material";
+import { IconButton, List, ListItemButton, useTheme } from "@mui/material";
 import usePortfolioRouting from "./usePortfolioRouting";
 import { PortfolioRouting } from "./RouteInfo";
 import { InfoTooltip } from "lee-storybook";
+import DinoWithGlasses from "../assets/DinoWithGlasses.png";
 
 export default function PortfolioHeader() {
   const theme = useTheme();
@@ -23,6 +24,13 @@ export default function PortfolioHeader() {
       <List
         style={{ display: "flex", flexDirection: "row", marginLeft: "16px" }}
       >
+        <IconButton
+          onClick={() => {
+            handleNavigate(PortfolioRouting.Home);
+          }}
+        >
+          <img src={DinoWithGlasses} />
+        </IconButton>
         <ListItemButton
           onClick={() => {
             handleNavigate(PortfolioRouting.Home);
