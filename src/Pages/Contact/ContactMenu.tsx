@@ -11,6 +11,10 @@ export default function ContactMenu() {
         backgroundColor: "black",
         borderBottomRightRadius: "10px",
         borderTopRightRadius: "10px",
+        borderBottom: "1px solid white",
+        borderTop: "1px solid white",
+        borderRight: "1px solid white",
+
         position: "absolute",
         left: 0,
         top: "10%",

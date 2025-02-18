@@ -3,6 +3,7 @@ import Routing from "./routing/Routing";
 import PortfolioHeader from "./routing/PortfolioHeader";
 import Circles from "./themes/Circles";
 import ContactMenu from "./Pages/Contact/ContactMenu";
+import DiagonalBackgrounds from "./themes/DiagonalBackgrounds";
 
 function App() {
   return (
@@ -22,16 +23,18 @@ function App() {
           flex: 1,
           overflowY: "scroll",
           marginLeft: "64px",
+          zIndex: 5,
         }}
       >
         <div style={{ overflowX: "hidden" }}>
           <Routing />
         </div>
       </div>
-      <Circles />
+      <DiagonalBackgrounds />
+      {/* <Circles /> */}
       <ContactMenu />
     </div>
   );
 }
-// info icon about rebecca purple
+
 export default App;
