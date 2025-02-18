@@ -5,11 +5,11 @@ const baseQuery = fetchBaseQuery({});
 
 export const baseApiSlice = createApi({
   baseQuery: baseQuery,
-  endpoints: (builder) => ({}),
+  endpoints: () => ({}),
 });
 
 export const apiSlice = baseApiSlice
   .enhanceEndpoints({ addTagTypes: [] })
   .injectEndpoints({
-    endpoints: (builder) => ({}),
+    endpoints: () => ({}),
   });

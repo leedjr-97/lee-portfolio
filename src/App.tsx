@@ -1,7 +1,7 @@
 import "./App.css";
 import Routing from "./routing/Routing";
 import PortfolioHeader from "./routing/PortfolioHeader";
-import Circles from "./themes/Circles";
+// import Circles from "./themes/Circles";
 import ContactMenu from "./Pages/Contact/ContactMenu";
 import DiagonalBackgrounds from "./themes/DiagonalBackgrounds";
 

@@ -1,12 +1,9 @@
-import { Typography, useTheme } from "@mui/material";
+import { Typography } from "@mui/material";
 import Tools from "./Tools";
 import Frontend from "./Frontend";
 import Backend from "./Backend";
 
 export default function Skills() {
-  const theme = useTheme();
-  // Geospatial
-
   return (
     <div
       style={{

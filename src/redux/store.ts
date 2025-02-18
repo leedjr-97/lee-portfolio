@@ -1,7 +1,7 @@
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
-import { Middleware, SerializedError, configureStore } from "@reduxjs/toolkit";
+import { configureStore } from "@reduxjs/toolkit";
 
-import appReducer, { appActions } from "./AppSlice";
+import appReducer from "./AppSlice";
 import { apiSlice } from "./ApiSlice";
 
 const store = configureStore({
