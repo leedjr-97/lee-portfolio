@@ -2,7 +2,7 @@ import { Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 import FallBack from "./Fallback";
 import Home from "../Pages/Home/Home";
-import { PortfolioRouting, baseRoute } from "./RouteInfo";
+import { PortfolioRouting } from "./RouteInfo";
 import About from "../Pages/About/About";
 import Skills from "../Pages/Skills/Skills";
 import Projects from "../Pages/Projects/Projects";
