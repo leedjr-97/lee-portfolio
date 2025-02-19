@@ -4,7 +4,7 @@ import PortfolioHeader from "./routing/PortfolioHeader";
 // import Circles from "./themes/Circles";
 import ContactMenu from "./Pages/Contact/ContactMenu";
 import DiagonalBackgrounds from "./themes/DiagonalBackgrounds";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import MobilePortfolioHeader from "./routing/MobilePortfolioHeader";
 import MobileFooter from "./routing/MobileFooter";
 import { useAppDispatch, useAppSelector } from "./redux/store";
