@@ -1,13 +1,15 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 
 export type Mode = "light" | "dark";
 
 interface AppState {
   mode: Mode;
+  isMobile: boolean;
 }
 
 const initialState: AppState = {
   mode: "dark",
+  isMobile: false,
 };
 
 export const appSlice = createSlice({
@@ -22,6 +24,9 @@ export const appSlice = createSlice({
         state.mode = "light";
         localStorage.setItem("mode", "light");
       }
+    },
+    toggleMobileView: (state, { payload }: PayloadAction<boolean>) => {
+      state.isMobile = payload;
     },
   },
 });

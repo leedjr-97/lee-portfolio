@@ -9,6 +9,8 @@ export default function Home() {
         flexDirection: "column",
         paddingRight: "48px",
         paddingLeft: "48px",
+        height: "100%",
+        overflowX: "scroll",
       }}
     >
       <div

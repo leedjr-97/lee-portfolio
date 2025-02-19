@@ -19,6 +19,7 @@ export default function ContactMenu() {
         left: 0,
         top: "10%",
         padding: "16px 0 16px 0",
+        zIndex: "5",
       }}
     >
       <List>
@@ -54,7 +55,7 @@ export default function ContactMenu() {
         <Tooltip title={"Copy Email Address"} placement={"right"}>
           <ListItemButton
             onClick={() => {
-              navigator.clipboard.writeText("stuffity");
+              navigator.clipboard.writeText("lee.edward008@gmail.com");
             }}
           >
             <ListItemIcon style={{ justifyContent: "center" }}>
