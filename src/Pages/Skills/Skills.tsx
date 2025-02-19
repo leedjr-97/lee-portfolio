@@ -2,8 +2,12 @@ import { Typography } from "@mui/material";
 import Tools from "./Tools";
 import Frontend from "./Frontend";
 import Backend from "./Backend";
+import { useAppSelector } from "../../redux/store";
+import { retrieveIsMobile } from "../../redux/reduxSelectors";
 
 export default function Skills() {
+  const isMobile = useAppSelector(retrieveIsMobile);
+
   return (
     <div
       style={{
@@ -19,11 +23,11 @@ export default function Skills() {
         {"Skills"}
       </Typography>
 
-      <Frontend />
+      <Frontend isMobile={isMobile} />
 
-      <Backend />
+      <Backend isMobile={isMobile} />
 
-      <Tools />
+      <Tools isMobile={isMobile} />
     </div>
   );
 }

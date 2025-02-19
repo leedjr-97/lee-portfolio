@@ -25,3 +25,34 @@ export const generateWorkExperience = (
     </div>
   );
 };
+
+export const generateMobileWorkExperience = (
+  companyName: string,
+  companyLogo: string,
+  jobTitle: string
+) => {
+  return (
+    <div style={{ marginBottom: "16px" }}>
+      <Typography
+        variant={"h4"}
+        style={{ display: "flex", alignItems: "center" }}
+      >
+        <img src={companyLogo} width={50} style={{ marginRight: "16px" }} />
+        {companyName}
+      </Typography>
+      {/* <LabelValue
+        label={"Role"}
+        value={jobTitle}
+        styleOverrides={{
+          marginLeft: "32px",
+        }}
+      /> */}
+      <Typography
+        variant={"h6"}
+        style={{ marginTop: "16px", marginLeft: "16px" }}
+      >
+        {jobTitle}
+      </Typography>
+    </div>
+  );
+};

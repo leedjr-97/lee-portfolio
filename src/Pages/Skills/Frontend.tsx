@@ -24,29 +24,79 @@ const NPMSvg =
   "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/npm/npm-original-wordmark.svg";
 const MaterialSvg =
   "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/materialui/materialui-original.svg";
-export default function Frontend() {
+export default function Frontend({ isMobile }: { isMobile: boolean }) {
   const theme = useTheme();
 
   const frontEndSkills: DisplayedSkills[] = useMemo(() => {
     return [
-      { svg: ReactSvg, size: 125, title: "React", needsTitle: true },
+      {
+        svg: ReactSvg,
+        size: isMobile ? 75 : 125,
+        title: "React",
+        needsTitle: true,
+      },
       {
         svg: ReactNativeSvg,
-        size: 125,
+        size: isMobile ? 75 : 125,
         title: "React Native",
         needsTitle: true,
       },
-      { svg: TypescriptSvg, size: 125, title: "Typescript", needsTitle: true },
-      { svg: JavaScriptSvg, size: 125, title: "JavaScript", needsTitle: true },
-      { svg: HTMLSvg, size: 125, title: "HTML", needsTitle: false },
-      { svg: CSSSvg, size: 125, title: "CSS", needsTitle: false },
-      { svg: JestSvg, size: 125, title: "Jest", needsTitle: true },
-      { svg: ReduxSvg, size: 125, title: "Redux", needsTitle: true },
-      { svg: YarnSvg, size: 125, title: "Yarn", needsTitle: false },
-      { svg: NPMSvg, size: 125, title: "NPM", needsTitle: false },
-      { svg: MaterialSvg, size: 125, title: "Material UI", needsTitle: true },
+      {
+        svg: TypescriptSvg,
+        size: isMobile ? 75 : 125,
+        title: "Typescript",
+        needsTitle: true,
+      },
+      {
+        svg: JavaScriptSvg,
+        size: isMobile ? 75 : 125,
+        title: "JavaScript",
+        needsTitle: true,
+      },
+      {
+        svg: HTMLSvg,
+        size: isMobile ? 75 : 125,
+        title: "HTML",
+        needsTitle: false,
+      },
+      {
+        svg: CSSSvg,
+        size: isMobile ? 75 : 125,
+        title: "CSS",
+        needsTitle: false,
+      },
+      {
+        svg: JestSvg,
+        size: isMobile ? 75 : 125,
+        title: "Jest",
+        needsTitle: true,
+      },
+      {
+        svg: ReduxSvg,
+        size: isMobile ? 75 : 125,
+        title: "Redux",
+        needsTitle: true,
+      },
+      {
+        svg: YarnSvg,
+        size: isMobile ? 75 : 125,
+        title: "Yarn",
+        needsTitle: false,
+      },
+      {
+        svg: NPMSvg,
+        size: isMobile ? 75 : 125,
+        title: "NPM",
+        needsTitle: false,
+      },
+      {
+        svg: MaterialSvg,
+        size: isMobile ? 75 : 125,
+        title: "Material UI",
+        needsTitle: true,
+      },
     ];
-  }, []);
+  }, [isMobile]);
 
   return (
     <div style={{ margin: "8px 0 8px 0" }}>
@@ -57,7 +107,7 @@ export default function Frontend() {
           style={{
             borderRadius: "5px",
             backgroundColor: theme.palette.grey[500],
-            height: "175px",
+            height: isMobile ? "125px" : "175px",
             display: "flex",
             flexDirection: "row",
             alignItems: "center",

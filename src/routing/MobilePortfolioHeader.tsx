@@ -93,6 +93,7 @@ export default function MobilePortfolioHeader() {
         <MenuItem
           onClick={() => {
             handleNavigate(PortfolioRouting.Home);
+            setAnchorEl(null);
           }}
         >
           <Typography variant={"h4"}>{"Home"}</Typography>
@@ -100,6 +101,7 @@ export default function MobilePortfolioHeader() {
         <MenuItem
           onClick={() => {
             handleNavigate(PortfolioRouting.About);
+            setAnchorEl(null);
           }}
         >
           <Typography variant={"h4"}>{"About"}</Typography>
@@ -107,6 +109,7 @@ export default function MobilePortfolioHeader() {
         <MenuItem
           onClick={() => {
             handleNavigate(PortfolioRouting.Skills);
+            setAnchorEl(null);
           }}
         >
           <Typography variant={"h4"}>{"Skills"}</Typography>
@@ -114,6 +117,7 @@ export default function MobilePortfolioHeader() {
         <MenuItem
           onClick={() => {
             handleNavigate(PortfolioRouting.Projects);
+            setAnchorEl(null);
           }}
         >
           <Typography variant={"h4"}>{"Projects"}</Typography>

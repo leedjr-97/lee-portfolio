@@ -1,7 +1,11 @@
 import { Typography } from "@mui/material";
 import ProfilePicture from "../../assets/ProfilePicture.jpg";
+import { useAppSelector } from "../../redux/store";
+import { retrieveIsMobile } from "../../redux/reduxSelectors";
 
 export default function Home() {
+  const isMobile = useAppSelector(retrieveIsMobile);
+
   return (
     <div
       style={{
@@ -16,13 +20,13 @@ export default function Home() {
       <div
         style={{
           display: "flex",
-          flexDirection: "row",
+          flexDirection: isMobile ? "column" : "row",
           width: "100%",
           paddingTop: "100px",
           justifyContent: "space-between",
         }}
       >
-        <div style={{ textAlign: "center", width: "65%" }}>
+        <div style={{ textAlign: "center", width: isMobile ? "100%" : "65%" }}>
           <Typography variant={"h1"} style={{ zIndex: 1 }}>
             {"Edward Lee"}
           </Typography>
@@ -41,11 +45,14 @@ export default function Home() {
             }
           </Typography>
         </div>
-        <div style={{ width: "30%" }}>
+        <div style={{ width: isMobile ? "100%" : "30%" }}>
           <img
             src={ProfilePicture}
-            width={400}
-            style={{ borderRadius: "25px" }}
+            width={isMobile ? "100%" : 400}
+            style={{
+              borderRadius: "25px",
+              marginTop: isMobile ? "32px" : undefined,
+            }}
           />
         </div>
       </div>

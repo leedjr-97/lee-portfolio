@@ -16,20 +16,50 @@ const GoSvg =
 const PerlSvg =
   "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/perl/perl-original.svg";
 
-export default function Backend() {
+export default function Backend({ isMobile }: { isMobile: boolean }) {
   const theme = useTheme();
 
   const backEndSkills: DisplayedSkills[] = useMemo(() => {
     return [
-      { svg: PythonSvg, size: 125, title: "Python", needsTitle: false },
-      { svg: JavaSvg, size: 125, title: "Java", needsTitle: false },
-      { svg: CPlusPlusSvg, size: 125, title: "C Plus Plus", needsTitle: false },
-      { svg: GraphqlSvg, size: 125, title: "GraphQL", needsTitle: false },
-      { svg: GoSvg, size: 125, title: "Go", needsTitle: true },
-      { svg: PerlSvg, size: 125, title: "Perl", needsTitle: true },
-      { svg: RestApiSvg, size: 125, title: "Rest APIs", needsTitle: false },
+      {
+        svg: PythonSvg,
+        size: isMobile ? 75 : 125,
+        title: "Python",
+        needsTitle: false,
+      },
+      {
+        svg: JavaSvg,
+        size: isMobile ? 75 : 125,
+        title: "Java",
+        needsTitle: false,
+      },
+      {
+        svg: CPlusPlusSvg,
+        size: isMobile ? 75 : 125,
+        title: "C Plus Plus",
+        needsTitle: false,
+      },
+      {
+        svg: GraphqlSvg,
+        size: isMobile ? 75 : 125,
+        title: "GraphQL",
+        needsTitle: false,
+      },
+      { svg: GoSvg, size: isMobile ? 75 : 125, title: "Go", needsTitle: true },
+      {
+        svg: PerlSvg,
+        size: isMobile ? 75 : 125,
+        title: "Perl",
+        needsTitle: true,
+      },
+      {
+        svg: RestApiSvg,
+        size: isMobile ? 75 : 125,
+        title: "Rest APIs",
+        needsTitle: false,
+      },
     ];
-  }, []);
+  }, [isMobile]);
 
   return (
     <div style={{ margin: "8px 0 8px 0" }}>
@@ -40,7 +70,7 @@ export default function Backend() {
           style={{
             borderRadius: "5px",
             backgroundColor: theme.palette.grey[500],
-            height: "175px",
+            height: isMobile ? "125px" : "175px",
             display: "flex",
             flexDirection: "row",
             alignItems: "center",

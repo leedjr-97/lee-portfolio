@@ -18,26 +18,61 @@ const GitSvg =
   "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original-wordmark.svg";
 const VScodeSvg =
   "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original-wordmark.svg";
-export default function Tools() {
+export default function Tools({ isMobile }: { isMobile: boolean }) {
   const theme = useTheme();
 
   const toolSkills: DisplayedSkills[] = useMemo(() => {
     return [
-      { svg: JiraSvg, size: 125, title: "Jira", needsTitle: false },
+      {
+        svg: JiraSvg,
+        size: isMobile ? 75 : 125,
+        title: "Jira",
+        needsTitle: false,
+      },
       {
         svg: FigmaSvg,
-        size: 125,
+        size: isMobile ? 75 : 125,
         title: "Figma",
         needsTitle: true,
       },
-      { svg: DockerSvg, size: 125, title: "Docker", needsTitle: true },
-      { svg: AWSSvg, size: 125, title: "AWS", needsTitle: false },
-      { svg: FirebaseSvg, size: 125, title: "Firebase", needsTitle: false },
-      { svg: DbeaverSvg, size: 125, title: "DBeaver", needsTitle: true },
-      { svg: GitSvg, size: 125, title: "Git", needsTitle: false },
-      { svg: VScodeSvg, size: 125, title: "VSCode", needsTitle: false },
+      {
+        svg: DockerSvg,
+        size: isMobile ? 75 : 125,
+        title: "Docker",
+        needsTitle: true,
+      },
+      {
+        svg: AWSSvg,
+        size: isMobile ? 75 : 125,
+        title: "AWS",
+        needsTitle: false,
+      },
+      {
+        svg: FirebaseSvg,
+        size: isMobile ? 75 : 125,
+        title: "Firebase",
+        needsTitle: false,
+      },
+      {
+        svg: DbeaverSvg,
+        size: isMobile ? 75 : 125,
+        title: "DBeaver",
+        needsTitle: true,
+      },
+      {
+        svg: GitSvg,
+        size: isMobile ? 75 : 125,
+        title: "Git",
+        needsTitle: false,
+      },
+      {
+        svg: VScodeSvg,
+        size: isMobile ? 75 : 125,
+        title: "VSCode",
+        needsTitle: false,
+      },
     ];
-  }, []);
+  }, [isMobile]);
 
   return (
     <div style={{ margin: "8px 0 8px 0" }}>
@@ -46,7 +81,7 @@ export default function Tools() {
         style={{
           borderRadius: "5px",
           backgroundColor: theme.palette.grey[500],
-          height: "175px",
+          height: isMobile ? "125px" : "175px",
           display: "flex",
           flexDirection: "row",
           alignItems: "center",

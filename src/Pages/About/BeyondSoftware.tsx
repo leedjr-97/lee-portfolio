@@ -1,6 +1,6 @@
 import { Typography } from "@mui/material";
 
-export default function BeyondSoftware() {
+export default function BeyondSoftware({ isMobile }: { isMobile: boolean }) {
   return (
     <div
       style={{
@@ -25,8 +25,8 @@ export default function BeyondSoftware() {
       </Typography>
 
       <iframe
-        width="853"
-        height="480"
+        width={isMobile ? "100%" : "853"}
+        height={isMobile ? "200" : "480"}
         src={`https://www.youtube.com/embed/ydAyvvDQrgY`}
         frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

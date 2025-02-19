@@ -3,7 +3,7 @@ import { Typography } from "@mui/material";
 import CSULogo from "../../assets/CSU-Symbol.png";
 import { LabelValue } from "lee-storybook";
 
-export default function Education() {
+export default function Education({ isMobile }: { isMobile: boolean }) {
   return (
     <div>
       <Typography variant={"h3"} style={{ textDecoration: "underline" }}>
@@ -16,13 +16,22 @@ export default function Education() {
           {"Colorado State University"}
         </Typography>
       </div>
-      <LabelValue
-        label={"Honors"}
-        value={"Honors: Cum Laude (GPA: 3.86/4.0)"}
-        styleOverrides={{
-          marginLeft: "32px",
-        }}
-      />
+      {isMobile ? (
+        <Typography
+          variant={"h6"}
+          style={{ marginTop: "16px", marginLeft: "16px" }}
+        >
+          {"Honors: Cum Laude (GPA: 3.86/4.0)"}
+        </Typography>
+      ) : (
+        <LabelValue
+          label={"Honors"}
+          value={"Cum Laude (GPA: 3.86/4.0)"}
+          styleOverrides={{
+            marginLeft: "32px",
+          }}
+        />
+      )}
     </div>
   );
 }
