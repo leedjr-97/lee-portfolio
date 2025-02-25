@@ -1,10 +1,12 @@
-import { IconButton, Tooltip, Typography } from "@mui/material";
-import DinoWithHardHat from "../../assets/DinoWithHardHat.png";
+import { Typography } from "@mui/material";
 import Sudoku from "../../assets/SudokuScreenshot.png";
+import Storybook from "../../assets/StorybookScreenshot.png";
 import { useState } from "react";
+// import BigDinoWithHardHat from "../../assets/BigDinoWithHardHat.png";
 
 enum ProjectsEnum {
   sudoku,
+  storybook,
 }
 export default function Projects() {
   const [hoveredLink, setHoveredLink] = useState<null | ProjectsEnum>(null);
@@ -25,27 +27,11 @@ export default function Projects() {
         overflowY: "scroll",
       }}
     >
-      {/* <Tooltip title={"Hard at work on more!"}>
-        <IconButton onClick={() => {}}>
-          <img src={DinoWithHardHat} width={256} />
-        </IconButton>
-      </Tooltip> */}
-
       <div
         style={{
           width: "100%",
-          cursor: "pointer",
           display: "flex",
           justifyContent: "center",
-        }}
-        onClick={() => {
-          window.open("https://leedjr-97.github.io/lee-sudoku/", "_blank");
-        }}
-        onMouseEnter={() => {
-          setHoveredLink(ProjectsEnum.sudoku);
-        }}
-        onMouseLeave={() => {
-          setHoveredLink(null);
         }}
       >
         <div
@@ -57,10 +43,20 @@ export default function Projects() {
             justifyContent: "center",
             borderRadius: "5px",
             padding: "16px",
+            cursor: "pointer",
             backgroundColor:
               hoveredLink === ProjectsEnum.sudoku
                 ? "rgba(150, 150, 150, 0.3)"
                 : undefined,
+          }}
+          onClick={() => {
+            window.open("https://leedjr-97.github.io/lee-sudoku/", "_blank");
+          }}
+          onMouseEnter={() => {
+            setHoveredLink(ProjectsEnum.sudoku);
+          }}
+          onMouseLeave={() => {
+            setHoveredLink(null);
           }}
         >
           <Typography variant={"h2"} style={{ marginRight: "32px" }}>
@@ -73,6 +69,58 @@ export default function Projects() {
           />
         </div>
       </div>
+
+      <div
+        style={{
+          width: "100%",
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
+        <div
+          style={{
+            width: "fit-content",
+            display: "flex",
+            flexDirection: "row",
+            alignItems: "center",
+            justifyContent: "center",
+            borderRadius: "5px",
+            padding: "16px",
+            cursor: "pointer",
+            backgroundColor:
+              hoveredLink === ProjectsEnum.storybook
+                ? "rgba(150, 150, 150, 0.3)"
+                : undefined,
+          }}
+          onClick={() => {
+            window.open("https://leedjr-97.github.io/lee-storybook/", "_blank");
+          }}
+          onMouseEnter={() => {
+            setHoveredLink(ProjectsEnum.storybook);
+          }}
+          onMouseLeave={() => {
+            setHoveredLink(null);
+          }}
+        >
+          <Typography variant={"h2"} style={{ marginRight: "32px" }}>
+            {"Storybook"}
+          </Typography>
+          <img
+            src={Storybook}
+            width={500}
+            style={{ borderRadius: "5px", border: "solid 1px white" }}
+          />
+        </div>
+      </div>
+
+      {/* <IconButton
+        onClick={() => {
+          window.open("https://github.com/leedjr-97", "_blank");
+        }}
+        style={{ margin: "auto" }}
+      >
+        <img src={BigDinoWithHardHat} />
+      </IconButton> */}
     </div>
   );
 }
