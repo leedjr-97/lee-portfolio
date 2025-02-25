@@ -2,6 +2,8 @@ import { Typography } from "@mui/material";
 import Sudoku from "../../assets/SudokuScreenshot.png";
 import Storybook from "../../assets/StorybookScreenshot.png";
 import { useState } from "react";
+import { retrieveIsMobile } from "../../redux/reduxSelectors";
+import { useAppSelector } from "../../redux/store";
 // import BigDinoWithHardHat from "../../assets/BigDinoWithHardHat.png";
 
 enum ProjectsEnum {
@@ -9,6 +11,7 @@ enum ProjectsEnum {
   storybook,
 }
 export default function Projects() {
+  const isMobile = useAppSelector(retrieveIsMobile);
   const [hoveredLink, setHoveredLink] = useState<null | ProjectsEnum>(null);
   // Rest-API driven Dashboard
   // Geospatial something
@@ -32,18 +35,19 @@ export default function Projects() {
           width: "100%",
           display: "flex",
           justifyContent: "center",
+          marginBottom: isMobile ? "16px" : 0,
         }}
       >
         <div
           style={{
             width: "fit-content",
             display: "flex",
-            flexDirection: "row",
             alignItems: "center",
             justifyContent: "center",
             borderRadius: "5px",
-            padding: "16px",
+            padding: isMobile ? "0" : "16px",
             cursor: "pointer",
+            flexDirection: isMobile ? "column" : "row",
             backgroundColor:
               hoveredLink === ProjectsEnum.sudoku
                 ? "rgba(150, 150, 150, 0.3)"
@@ -64,7 +68,7 @@ export default function Projects() {
           </Typography>
           <img
             src={Sudoku}
-            width={500}
+            width={isMobile ? "100%" : 500}
             style={{ borderRadius: "5px", border: "solid 1px white" }}
           />
         </div>
@@ -75,18 +79,19 @@ export default function Projects() {
           width: "100%",
           display: "flex",
           justifyContent: "center",
+          marginBottom: isMobile ? "16px" : 0,
         }}
       >
         <div
           style={{
             width: "fit-content",
             display: "flex",
-            flexDirection: "row",
             alignItems: "center",
             justifyContent: "center",
             borderRadius: "5px",
-            padding: "16px",
+            padding: isMobile ? "0" : "16px",
             cursor: "pointer",
+            flexDirection: isMobile ? "column" : "row",
             backgroundColor:
               hoveredLink === ProjectsEnum.storybook
                 ? "rgba(150, 150, 150, 0.3)"
@@ -107,7 +112,7 @@ export default function Projects() {
           </Typography>
           <img
             src={Storybook}
-            width={500}
+            width={isMobile ? "100%" : 500}
             style={{ borderRadius: "5px", border: "solid 1px white" }}
           />
         </div>
