@@ -75,17 +75,6 @@ export default function PortfolioHeader() {
         >
           {"Projects"}
         </ListItemButton>
-        {/* <ListItemButton
-          onClick={() => {
-            handleNavigate(PortfolioRouting.Contact);
-          }}
-          style={{
-            textDecoration:
-              pathname === PortfolioRouting.Contact ? "underline" : undefined,
-          }}
-        >
-          {"Contact"}
-        </ListItemButton> */}
       </List>
 
       <div

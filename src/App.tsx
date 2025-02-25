@@ -86,7 +86,7 @@ function App() {
           zIndex: 5,
         }}
       >
-        <div style={{ overflowX: "hidden" }}>
+        <div style={{ overflowX: "hidden", flex: 1 }}>
           <Routing />
         </div>
       </div>
