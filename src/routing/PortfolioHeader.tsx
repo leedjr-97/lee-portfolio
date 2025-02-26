@@ -2,7 +2,7 @@ import { IconButton, List, ListItemButton, useTheme } from "@mui/material";
 import usePortfolioRouting from "./usePortfolioRouting";
 import { PortfolioRouting } from "./RouteInfo";
 import { InfoTooltip } from "lee-storybook";
-import DinoWithGlasses from "../assets/DinoWithGlasses.png";
+import DinoWithGlasses from "../assets/Mine/DinoWithGlasses.png";
 
 export default function PortfolioHeader() {
   const theme = useTheme();

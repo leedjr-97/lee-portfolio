@@ -1,6 +1,6 @@
 import { Typography } from "@mui/material";
-import Sudoku from "../../assets/SudokuScreenshot.png";
-import Storybook from "../../assets/StorybookScreenshot.png";
+import Sudoku from "../../assets/ProjectScreenshots/SudokuScreenshot.png";
+import Storybook from "../../assets/ProjectScreenshots/StorybookScreenshot.png";
 import { useState } from "react";
 import { retrieveIsMobile } from "../../redux/reduxSelectors";
 import { useAppSelector } from "../../redux/store";

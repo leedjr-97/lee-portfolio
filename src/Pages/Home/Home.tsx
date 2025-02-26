@@ -1,8 +1,9 @@
 import { Typography } from "@mui/material";
-import ProfilePicture from "../../assets/ProfilePicture.jpg";
+import ProfilePicture from "../../assets/Mine/ProfilePicture.jpg";
 import { useAppSelector } from "../../redux/store";
 import { retrieveIsMobile } from "../../redux/reduxSelectors";
 import Recommendations from "./Recommendations";
+import WhatIDo from "./WhatIDo";
 
 export default function Home() {
   const isMobile = useAppSelector(retrieveIsMobile);
@@ -25,6 +26,7 @@ export default function Home() {
           width: "100%",
           paddingTop: "100px",
           justifyContent: "space-between",
+          paddingBottom: "50px",
         }}
       >
         <div style={{ textAlign: "center", width: isMobile ? "100%" : "65%" }}>
@@ -57,6 +59,8 @@ export default function Home() {
           />
         </div>
       </div>
+
+      <WhatIDo />
 
       <Recommendations />
     </div>

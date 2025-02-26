@@ -3,7 +3,7 @@ import LinkedInLogo from "../../assets/LinkedIn-Logos/LI-In-Bug.png";
 import GithubLogo from "../../assets/github-mark/github-mark-white.svg";
 import EmailRoundedIcon from "@mui/icons-material/EmailRounded";
 import FileOpenIcon from "@mui/icons-material/FileOpen";
-import ResumePDF from "../../assets/EdwardLeeFrontEndEngineer.pdf";
+import ResumePDF from "../../assets/Mine/EdwardLeeFrontEndEngineer.pdf";
 export default function ContactMenu() {
   return (
     <div

@@ -18,7 +18,7 @@ export default function Recommendations() {
   }, []);
 
   return (
-    <div>
+    <div style={{ margin: "16px" }}>
       <Typography variant={"h3"} style={{ marginBottom: "16px" }}>
         {"What Others Are Saying:"}
       </Typography>

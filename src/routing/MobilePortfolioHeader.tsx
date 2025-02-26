@@ -10,7 +10,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { useState } from "react";
 import usePortfolioRouting from "./usePortfolioRouting";
 import { PortfolioRouting } from "./RouteInfo";
-import DinoWithGlasses from "../assets/DinoWithGlasses.png";
+import DinoWithGlasses from "../assets/Mine/DinoWithGlasses.png";
 import { InfoTooltip } from "lee-storybook";
 
 export default function MobilePortfolioHeader() {
