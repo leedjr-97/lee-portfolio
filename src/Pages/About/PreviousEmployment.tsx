@@ -6,6 +6,7 @@ import {
 import ModiiLogo from "../../assets/mstile-310x310.png";
 import NutrienLogo from "../../assets/Nutrien/Corporate logos/Nutrien N only RGB_0.png";
 import ParsonsLogo from "../../assets/parsons-logo.svg";
+import CompassionLogo from "../../assets/Compassion-logo.jpg";
 
 export default function PreviousEmployment({
   isMobile,
@@ -55,6 +56,18 @@ export default function PreviousEmployment({
             "Parsons Corporation",
             ParsonsLogo,
             "Software Engineer"
+          )}
+
+      {isMobile
+        ? generateMobileWorkExperience(
+            "Compassion International",
+            CompassionLogo,
+            "Software Developer Intern"
+          )
+        : generateWorkExperience(
+            "Compassion International",
+            CompassionLogo,
+            "Software Developer Intern"
           )}
     </div>
   );

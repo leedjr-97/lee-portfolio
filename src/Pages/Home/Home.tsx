@@ -4,6 +4,7 @@ import { useAppSelector } from "../../redux/store";
 import { retrieveIsMobile } from "../../redux/reduxSelectors";
 import Recommendations from "./Recommendations";
 import WhatIDo from "./WhatIDo";
+import HomeFooter from "./HomeFooter";
 
 export default function Home() {
   const isMobile = useAppSelector(retrieveIsMobile);
@@ -63,6 +64,8 @@ export default function Home() {
       <WhatIDo />
 
       <Recommendations />
+
+      <HomeFooter />
     </div>
   );
 }
