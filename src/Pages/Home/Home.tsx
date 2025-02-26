@@ -61,9 +61,9 @@ export default function Home() {
         </div>
       </div>
 
-      <WhatIDo />
+      <WhatIDo isMobile={isMobile} />
 
-      <Recommendations />
+      <Recommendations isMobile={isMobile} />
 
       <HomeFooter />
     </div>

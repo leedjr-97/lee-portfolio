@@ -8,7 +8,7 @@ import {
 } from "./GetRecs";
 import { Typography } from "@mui/material";
 
-export default function Recommendations() {
+export default function Recommendations({ isMobile }: { isMobile: boolean }) {
   const row1 = useMemo(() => {
     return [getMadiRecommendation(), getMoRecommendation()];
   }, []);
@@ -18,37 +18,53 @@ export default function Recommendations() {
   }, []);
 
   return (
-    <div style={{ margin: "16px" }}>
-      <Typography variant={"h3"} style={{ marginBottom: "16px" }}>
+    <div style={{ margin: isMobile ? "64px 0px 32px 0px" : "16px" }}>
+      <Typography
+        variant={"h3"}
+        style={{
+          marginBottom: "16px",
+          textDecoration: isMobile ? "underline" : undefined,
+        }}
+      >
         {"What Others Are Saying:"}
       </Typography>
 
       <div
         style={{
           display: "flex",
-          flexDirection: "row",
-          justifyContent: "space-between",
+          flexDirection: isMobile ? "column" : "row",
+          justifyContent: isMobile ? "center" : "space-between",
           alignItems: "flex-start",
           marginBottom: "32px",
         }}
       >
         {row1?.map((rec, index) => (
-          <Recommendation key={index} recommendation={rec} index={index} />
+          <Recommendation
+            key={index}
+            recommendation={rec}
+            index={index}
+            isMobile={isMobile}
+          />
         ))}
       </div>
 
       <div
         style={{
           display: "flex",
-          flexDirection: "row",
+          flexDirection: isMobile ? "column" : "row",
           justifyContent: "space-between",
           alignItems: "flex-start",
           marginBottom: "32px",
-          marginTop: "-32px",
+          marginTop: isMobile ? undefined : "-32px",
         }}
       >
         {row2?.map((rec, index) => (
-          <Recommendation key={index} recommendation={rec} index={index} />
+          <Recommendation
+            key={index}
+            recommendation={rec}
+            index={index}
+            isMobile={isMobile}
+          />
         ))}
       </div>
     </div>
@@ -58,9 +74,11 @@ export default function Recommendations() {
 function Recommendation({
   recommendation,
   index,
+  isMobile,
 }: {
   recommendation: Rec;
   index: number;
+  isMobile: boolean;
 }) {
   return (
     <div
@@ -71,9 +89,9 @@ function Recommendation({
         alignItems: "center",
         borderRadius: "5px",
         minHeight: "225px",
-        width: "45%",
+        width: isMobile ? "100%" : "45%",
         padding: "16px",
-        marginTop: index === 1 ? "75px" : "0%",
+        marginTop: index === 1 ? (isMobile ? "32px" : "75px") : "0%",
       }}
     >
       <div

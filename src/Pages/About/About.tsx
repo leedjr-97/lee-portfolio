@@ -47,8 +47,8 @@ export default function About() {
         style={{
           display: "flex",
           flexDirection: "column",
-          marginLeft: "48px",
-          marginRight: "48px",
+          marginLeft: isMobile ? 0 : "48px",
+          marginRight: isMobile ? 0 : "48px",
         }}
       >
         <DesignPassion />
