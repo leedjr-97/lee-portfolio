@@ -24,6 +24,10 @@ function App() {
   const isMobile = useAppSelector(retrieveIsMobile);
 
   useEffect(() => {
+    const dimensions = getWindowDimensions();
+    if (isMobile !== dimensions.width < 800) {
+      dispatch(appActions.toggleMobileView(dimensions.width < 800));
+    }
     function handleResize() {
       const dimensions = getWindowDimensions();
 
@@ -32,7 +36,7 @@ function App() {
 
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  }, [isMobile]);
 
   if (isMobile) {
     return (

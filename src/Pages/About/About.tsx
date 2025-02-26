@@ -43,13 +43,22 @@ export default function About() {
         />
       </div>
 
-      <DesignPassion />
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          marginLeft: "48px",
+          marginRight: "48px",
+        }}
+      >
+        <DesignPassion />
 
-      <BeyondSoftware isMobile={isMobile} />
+        <BeyondSoftware isMobile={isMobile} />
 
-      <PreviousEmployment isMobile={isMobile} />
+        <PreviousEmployment isMobile={isMobile} />
 
-      <Education isMobile={isMobile} />
+        <Education isMobile={isMobile} />
+      </div>
     </div>
   );
 }

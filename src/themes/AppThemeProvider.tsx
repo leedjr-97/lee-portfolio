@@ -1,10 +1,9 @@
 import React from "react";
 import ChakraPetch from "../assets/fonts/Chakra_Petch/ChakraPetch-Regular.ttf";
-// import ChakraPetchItalic from "../assets/fonts/Chakra_Petch/ChakraPetch-Italic.ttf";
+import ChakraPetchItalic from "../assets/fonts/Chakra_Petch/ChakraPetch-Italic.ttf";
 import ChakraPetchBold from "../assets/fonts/Chakra_Petch/ChakraPetch-Bold.ttf";
 import ChakraPetchLight from "../assets/fonts/Chakra_Petch/ChakraPetch-Light.ttf";
 import ChakraPetchMedium from "../assets/fonts/Chakra_Petch/ChakraPetch-Medium.ttf";
-// import ChakraPetch from '../assets/fonts/Chakra_Petch/ChakraPetch-Regular.ttf'
 import {
   PaletteMode,
   alpha,
@@ -277,6 +276,13 @@ export const AppThemeProvider: React.FC<Props> = ({ children }) => {
                   src: local('ChakraPetch'), local('ChakraPetch-Medium'), url(${ChakraPetchMedium}) format('truetype');
                   font-weight: 500;
                   font-style: normal;
+                  font-display: swap;
+                }
+              @font-face {
+                  font-family: 'ChakraPetch';
+                  src: local('ChakraPetch'), local('ChakraPetchItalic-Italic'), url(${ChakraPetchItalic}) format('truetype');
+                  font-weight: 500;
+                  font-style: italic;
                   font-display: swap;
                 }
               `,

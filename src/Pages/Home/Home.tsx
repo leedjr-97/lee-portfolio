@@ -2,6 +2,7 @@ import { Typography } from "@mui/material";
 import ProfilePicture from "../../assets/ProfilePicture.jpg";
 import { useAppSelector } from "../../redux/store";
 import { retrieveIsMobile } from "../../redux/reduxSelectors";
+import Recommendations from "./Recommendations";
 
 export default function Home() {
   const isMobile = useAppSelector(retrieveIsMobile);
@@ -45,7 +46,7 @@ export default function Home() {
             }
           </Typography>
         </div>
-        <div style={{ width: isMobile ? "100%" : "30%" }}>
+        <div style={{ width: isMobile ? "100%" : "30%", paddingRight: "64px" }}>
           <img
             src={ProfilePicture}
             width={isMobile ? "100%" : 400}
@@ -56,6 +57,8 @@ export default function Home() {
           />
         </div>
       </div>
+
+      <Recommendations />
     </div>
   );
 }
