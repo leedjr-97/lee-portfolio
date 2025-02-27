@@ -5,10 +5,18 @@ import RateDrawer from "../../assets/ProjectScreenshots/RateDrawer.png";
 import MiroDesigns from "../../assets/ProjectScreenshots/MiroDesigns.png";
 import CodeDesign from "../../assets/ProjectScreenshots/CodeDesign.png";
 import EventCreation from "../../assets/ProjectScreenshots/EventCreation.png";
+import { LeftMargin } from "../../types/PortfolioTypes";
 
 export default function WhatIDo({ isMobile }: { isMobile: boolean }) {
   return (
-    <div style={{ display: "flex", flexDirection: "column" }}>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        paddingRight: "48px",
+        paddingLeft: `${48 + LeftMargin}px`,
+      }}
+    >
       <Typography
         variant={"h3"}
         style={{

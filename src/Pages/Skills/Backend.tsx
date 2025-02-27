@@ -69,7 +69,7 @@ export default function Backend({ isMobile }: { isMobile: boolean }) {
         <div
           style={{
             borderRadius: "5px",
-            backgroundColor: theme.palette.grey[500],
+            backgroundColor: theme.palette.grey[400],
             height: isMobile ? "125px" : "175px",
             display: "flex",
             flexDirection: "row",

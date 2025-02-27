@@ -6,9 +6,11 @@ import {
   getPaulRecommendation,
   Rec,
 } from "./GetRecs";
-import { Typography } from "@mui/material";
+import { Theme, Typography, useTheme } from "@mui/material";
+import { LeftMargin } from "../../types/PortfolioTypes";
 
 export default function Recommendations({ isMobile }: { isMobile: boolean }) {
+  const theme = useTheme();
   const row1 = useMemo(() => {
     return [getMadiRecommendation(), getMoRecommendation()];
   }, []);
@@ -18,7 +20,13 @@ export default function Recommendations({ isMobile }: { isMobile: boolean }) {
   }, []);
 
   return (
-    <div style={{ margin: isMobile ? "64px 0px 32px 0px" : "16px" }}>
+    <div
+      style={{
+        margin: isMobile ? "64px 0px 32px 0px" : "16px",
+        paddingRight: "48px",
+        paddingLeft: `${48 + LeftMargin}px`,
+      }}
+    >
       <Typography
         variant={"h3"}
         style={{
@@ -44,6 +52,7 @@ export default function Recommendations({ isMobile }: { isMobile: boolean }) {
             recommendation={rec}
             index={index}
             isMobile={isMobile}
+            theme={theme}
           />
         ))}
       </div>
@@ -64,6 +73,7 @@ export default function Recommendations({ isMobile }: { isMobile: boolean }) {
             recommendation={rec}
             index={index}
             isMobile={isMobile}
+            theme={theme}
           />
         ))}
       </div>
@@ -75,19 +85,22 @@ function Recommendation({
   recommendation,
   index,
   isMobile,
+  theme,
 }: {
   recommendation: Rec;
   index: number;
   isMobile: boolean;
+  theme: Theme;
 }) {
   return (
     <div
       style={{
-        backgroundColor: "gray",
+        backgroundColor: theme.palette.grey[400],
         display: "flex",
         flexDirection: "row",
         alignItems: "center",
         borderRadius: "5px",
+        border: "solid 1px white",
         minHeight: "225px",
         width: isMobile ? "100%" : "45%",
         padding: "16px",

@@ -5,6 +5,7 @@ import { retrieveIsMobile } from "../../redux/reduxSelectors";
 import Recommendations from "./Recommendations";
 import WhatIDo from "./WhatIDo";
 import HomeFooter from "./HomeFooter";
+import { LeftMargin } from "../../types/PortfolioTypes";
 
 export default function Home() {
   const isMobile = useAppSelector(retrieveIsMobile);
@@ -14,10 +15,8 @@ export default function Home() {
       style={{
         display: "flex",
         flexDirection: "column",
-        paddingRight: "48px",
-        paddingLeft: "48px",
         height: "100%",
-        overflowX: "scroll",
+        overflowX: isMobile ? "hidden" : "scroll",
       }}
     >
       <div
@@ -28,6 +27,8 @@ export default function Home() {
           paddingTop: "100px",
           justifyContent: "space-between",
           paddingBottom: "50px",
+          paddingRight: "48px",
+          paddingLeft: `${48 + LeftMargin}px`,
         }}
       >
         <div style={{ textAlign: "center", width: isMobile ? "100%" : "65%" }}>
@@ -65,7 +66,9 @@ export default function Home() {
 
       <Recommendations isMobile={isMobile} />
 
-      <HomeFooter />
+      <div>
+        <HomeFooter />
+      </div>
     </div>
   );
 }
