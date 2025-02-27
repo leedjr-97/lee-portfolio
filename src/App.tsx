@@ -4,13 +4,12 @@ import PortfolioHeader from "./routing/PortfolioHeader";
 // import Circles from "./themes/Circles";
 import ContactMenu from "./Pages/Contact/ContactMenu";
 import DiagonalBackgrounds from "./themes/DiagonalBackgrounds";
-import { useEffect, useRef, useState } from "react";
+import { useEffect } from "react";
 import MobilePortfolioHeader from "./routing/MobilePortfolioHeader";
 import MobileFooter from "./routing/MobileFooter";
 import { useAppDispatch, useAppSelector } from "./redux/store";
 import { appActions } from "./redux/AppSlice";
 import { retrieveIsMobile } from "./redux/reduxSelectors";
-import { Box } from "@mui/material";
 
 function getWindowDimensions() {
   const { innerWidth: width, innerHeight: height } = window;

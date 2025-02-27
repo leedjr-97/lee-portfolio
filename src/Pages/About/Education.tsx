@@ -1,9 +1,15 @@
-import { Typography } from "@mui/material";
+import { Theme, Typography } from "@mui/material";
 
 import CSULogo from "../../assets/CSU-Symbol.png";
 import { LabelValue } from "lee-storybook";
 
-export default function Education({ isMobile }: { isMobile: boolean }) {
+export default function Education({
+  isMobile,
+  theme,
+}: {
+  isMobile: boolean;
+  theme: Theme;
+}) {
   return (
     <div>
       <Typography variant={"h3"} style={{ textDecoration: "underline" }}>

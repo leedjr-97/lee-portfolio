@@ -1,11 +1,20 @@
-import { Typography } from "@mui/material";
+import { Theme, Typography } from "@mui/material";
 
-export default function BeyondSoftware({ isMobile }: { isMobile: boolean }) {
+export default function BeyondSoftware({
+  isMobile,
+  theme,
+}: {
+  isMobile: boolean;
+  theme: Theme;
+}) {
   return (
     <div
       style={{
-        marginTop: "16px",
+        marginTop: "32px",
         marginBottom: "16px",
+        backgroundColor: theme.palette.grey[200],
+        borderRadius: "10px",
+        padding: "16px",
       }}
     >
       <Typography

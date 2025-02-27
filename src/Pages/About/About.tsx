@@ -9,9 +9,11 @@ import BeyondSoftware from "./BeyondSoftware";
 import DesignPassion from "./DesignPassion";
 import { useAppSelector } from "../../redux/store";
 import { retrieveIsMobile } from "../../redux/reduxSelectors";
+import { useTheme } from "@mui/material";
 
 const description = `   Driven by a desire for excellence, I'm a front end software engineer passionate about creating innovative user experiences with rock-solid engineering that exceed expectations! I'm skilled in React, React Native, and Typescript, with additional experience in back-end programming languages such as Golang, Java, and C++. I am known for being a reliable, hard-working, quick learning engineer capable of taking the lead on development teams to solve complex problems and building a friendly and collaborative environment for engineers working towards common goals.`;
 export default function About() {
+  const theme = useTheme();
   const editor = useRef(null);
   const isMobile = useAppSelector(retrieveIsMobile);
 
@@ -51,13 +53,13 @@ export default function About() {
           marginRight: isMobile ? 0 : "48px",
         }}
       >
-        <DesignPassion />
+        <DesignPassion theme={theme} />
 
-        <BeyondSoftware isMobile={isMobile} />
+        <BeyondSoftware isMobile={isMobile} theme={theme} />
 
-        <PreviousEmployment isMobile={isMobile} />
+        <PreviousEmployment isMobile={isMobile} theme={theme} />
 
-        <Education isMobile={isMobile} />
+        <Education isMobile={isMobile} theme={theme} />
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-import { Typography } from "@mui/material";
+import { Theme, Typography } from "@mui/material";
 import {
   generateMobileWorkExperience,
   generateWorkExperience,
@@ -10,8 +10,10 @@ import CompassionLogo from "../../assets/Compassion-logo.jpg";
 
 export default function PreviousEmployment({
   isMobile,
+  theme,
 }: {
   isMobile: boolean;
+  theme: Theme;
 }) {
   return (
     <div style={{ marginTop: "32px" }}>
