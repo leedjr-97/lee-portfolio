@@ -16,7 +16,15 @@ export default function PreviousEmployment({
   theme: Theme;
 }) {
   return (
-    <div style={{ marginTop: "32px" }}>
+    <div
+      style={{
+        marginTop: "32px",
+        marginBottom: "16px",
+        backgroundColor: theme.palette.grey[200],
+        borderRadius: "10px",
+        padding: "16px",
+      }}
+    >
       <Typography
         variant={"h3"}
         style={{ textDecoration: "underline", marginBottom: "16px" }}

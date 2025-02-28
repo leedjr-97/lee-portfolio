@@ -11,7 +11,15 @@ export default function Education({
   theme: Theme;
 }) {
   return (
-    <div>
+    <div
+      style={{
+        marginTop: "32px",
+        marginBottom: "16px",
+        backgroundColor: theme.palette.grey[200],
+        borderRadius: "10px",
+        padding: "16px",
+      }}
+    >
       <Typography variant={"h3"} style={{ textDecoration: "underline" }}>
         {"Education:"}
       </Typography>
