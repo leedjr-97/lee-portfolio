@@ -47,6 +47,7 @@ function App() {
           display: "flex",
           flexDirection: "column",
           overflow: "hidden",
+          color: "white",
         }}
       >
         <MobilePortfolioHeader />
@@ -78,6 +79,7 @@ function App() {
         display: "flex",
         flexDirection: "column",
         overflow: "hidden",
+        color: "white",
       }}
     >
       <PortfolioHeader />
@@ -86,7 +88,6 @@ function App() {
           display: "flex",
           flex: 1,
           overflowY: "scroll",
-          // marginLeft: "64px",
           zIndex: 5,
         }}
       >
