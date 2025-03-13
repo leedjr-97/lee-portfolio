@@ -17,18 +17,17 @@ export default function Home() {
         flexDirection: "column",
         height: "100%",
         overflowX: isMobile ? "hidden" : "scroll",
+        overflowY: "hidden",
+        paddingTop: "100px",
       }}
     >
       <div
         style={{
           display: "flex",
           flexDirection: isMobile ? "column" : "row",
-          width: "100%",
-          paddingTop: "100px",
           justifyContent: "space-between",
           paddingBottom: "50px",
-          paddingRight: "48px",
-          paddingLeft: `${48 + LeftMargin}px`,
+          marginLeft: `${48 + LeftMargin}px`,
         }}
       >
         <div style={{ textAlign: "center", width: isMobile ? "100%" : "65%" }}>
