@@ -4,6 +4,8 @@ import Frontend from "./Frontend";
 import Backend from "./Backend";
 import { useAppSelector } from "../../redux/store";
 import { retrieveIsMobile } from "../../redux/reduxSelectors";
+import { LeftMargin } from "../../types/PortfolioTypes";
+import HomeFooter from "../Home/HomeFooter";
 
 export default function Skills() {
   const isMobile = useAppSelector(retrieveIsMobile);
@@ -13,21 +15,32 @@ export default function Skills() {
       style={{
         display: "flex",
         flexDirection: "column",
-        paddingRight: "48px",
-        paddingLeft: "48px",
-        justifyContent: "center",
-        alignContent: "center",
+        width: "100%",
       }}
     >
-      <Typography variant={"h2"} style={{ marginTop: "32px" }}>
-        {"Skills"}
-      </Typography>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignContent: "center",
+          margin: `24px 48px 48px ${60 + LeftMargin}px`,
+        }}
+      >
+        <Typography variant={"h2"} style={{ marginTop: "32px" }}>
+          {"Skills"}
+        </Typography>
 
-      <Frontend isMobile={isMobile} />
+        <Frontend isMobile={isMobile} />
 
-      <Backend isMobile={isMobile} />
+        <Backend isMobile={isMobile} />
 
-      <Tools isMobile={isMobile} />
+        <Tools isMobile={isMobile} />
+      </div>
+
+      <div>
+        <HomeFooter overridePadding={"16px 32px 0 32px"} />
+      </div>
     </div>
   );
 }

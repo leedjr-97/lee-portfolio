@@ -4,6 +4,7 @@ import Storybook from "../../assets/ProjectScreenshots/StorybookScreenshot.png";
 import { useState } from "react";
 import { retrieveIsMobile } from "../../redux/reduxSelectors";
 import { useAppSelector } from "../../redux/store";
+import HomeFooter from "../Home/HomeFooter";
 // import BigDinoWithHardHat from "../../assets/BigDinoWithHardHat.png";
 
 enum ProjectsEnum {
@@ -25,9 +26,9 @@ export default function Projects() {
       style={{
         display: "flex",
         flexDirection: "column",
-        padding: "64px 48px 24px 48px",
-        justifyContent: "center",
-        overflowY: "scroll",
+        height: "100%",
+        width: "100%",
+        marginTop: "32px",
       }}
     >
       <div
@@ -126,6 +127,9 @@ export default function Projects() {
       >
         <img src={BigDinoWithHardHat} />
       </IconButton> */}
+      <div>
+        <HomeFooter overridePadding={"16px 32px 0 32px"} />
+      </div>
     </div>
   );
 }

@@ -16,9 +16,6 @@ export default function Home() {
         display: "flex",
         flexDirection: "column",
         height: "100%",
-        overflowX: isMobile ? "hidden" : "scroll",
-        overflowY: "hidden",
-        paddingTop: "100px",
       }}
     >
       <div
@@ -27,6 +24,7 @@ export default function Home() {
           flexDirection: isMobile ? "column" : "row",
           justifyContent: "space-between",
           paddingBottom: "50px",
+          marginTop: "100px",
           marginLeft: `${48 + LeftMargin}px`,
         }}
       >

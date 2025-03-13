@@ -5,13 +5,17 @@ import FileOpenIcon from "@mui/icons-material/FileOpen";
 import ResumePDF from "../../assets/Mine/EdwardLeeFrontEndEngineer.pdf";
 import "./HomeFooter.css";
 
-export default function HomeFooter() {
+export default function HomeFooter({
+  overridePadding,
+}: {
+  overridePadding?: string;
+}) {
   return (
     <>
       <div id={"line"} />
       <div
         style={{
-          padding: "16px 32px 48px 32px",
+          padding: overridePadding ?? "16px 32px 48px 32px",
           backgroundColor: "black",
           textAlign: "center",
           height: "300px",

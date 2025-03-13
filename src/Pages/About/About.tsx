@@ -10,6 +10,8 @@ import DesignPassion from "./DesignPassion";
 import { useAppSelector } from "../../redux/store";
 import { retrieveIsMobile } from "../../redux/reduxSelectors";
 import { useTheme } from "@mui/material";
+import HomeFooter from "../Home/HomeFooter";
+import { LeftMargin } from "../../types/PortfolioTypes";
 
 const description = `   Driven by a desire for excellence, I'm a front end software engineer passionate about creating innovative user experiences with rock-solid engineering that exceed expectations! I'm skilled in React, React Native, and Typescript, with additional experience in back-end programming languages such as Golang, Java, and C++. I am known for being a reliable, hard-working, quick learning engineer capable of taking the lead on development teams to solve complex problems and building a friendly and collaborative environment for engineers working towards common goals.`;
 export default function About() {
@@ -22,37 +24,37 @@ export default function About() {
       style={{
         display: "flex",
         flexDirection: "column",
-        padding: "64px 48px 24px 48px",
-        justifyContent: "center",
-        overflowY: "scroll",
+        width: "100%",
+        height: "100%",
       }}
     >
-      <div style={{ display: "grid", overflow: "hidden" }}>
-        <CodeMirror
-          readOnly={true}
-          extensions={[langs.json(), EditorView.lineWrapping]}
-          minHeight={"100px"}
-          ref={editor}
-          theme={darcula}
-          value={description}
-          style={{
-            justifySelf: "center",
-            width: isMobile ? "100%" : "90%",
-            fontSize: isMobile ? "16px" : "24px",
-            overflow: "hidden",
-          }}
-          editable={false}
-        />
-      </div>
-
       <div
         style={{
           display: "flex",
           flexDirection: "column",
-          marginLeft: isMobile ? 0 : "48px",
+          marginLeft: isMobile ? 0 : `${48 + LeftMargin}px`,
           marginRight: isMobile ? 0 : "48px",
+          marginTop: "48px",
         }}
       >
+        <div style={{ display: "grid", overflowX: "hidden" }}>
+          <CodeMirror
+            readOnly={true}
+            extensions={[langs.json(), EditorView.lineWrapping]}
+            minHeight={"100px"}
+            ref={editor}
+            theme={darcula}
+            value={description}
+            style={{
+              justifySelf: "center",
+              width: isMobile ? "100%" : "90%",
+              fontSize: isMobile ? "16px" : "24px",
+              overflow: "hidden",
+            }}
+            editable={false}
+          />
+        </div>
+
         <DesignPassion theme={theme} />
 
         <BeyondSoftware isMobile={isMobile} theme={theme} />
@@ -60,6 +62,10 @@ export default function About() {
         <PreviousEmployment isMobile={isMobile} theme={theme} />
 
         <Education isMobile={isMobile} theme={theme} />
+      </div>
+
+      <div>
+        <HomeFooter overridePadding={"16px 32px 0 32px"} />
       </div>
     </div>
   );
