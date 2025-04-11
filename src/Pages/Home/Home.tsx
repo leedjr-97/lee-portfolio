@@ -41,11 +41,11 @@ export default function Home() {
           <Typography variant={"h3"} style={{ marginTop: "4px", zIndex: 1 }}>
             {"<Designer />"}
           </Typography>
-          <Typography variant={"h5"} style={{ marginTop: "16px", zIndex: 1 }}>
+{/*           <Typography variant={"h5"} style={{ marginTop: "16px", zIndex: 1 }}>
             {
               '"And whatever you do, in word or deed, do everything in the name of the Lord Jesus, giving thanks to God the Father through him." - Colossians 3:17'
             }
-          </Typography>
+          </Typography> */}
         </div>
         <div style={{ width: isMobile ? "100%" : "30%", paddingRight: "64px" }}>
           <img
